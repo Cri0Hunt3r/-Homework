@@ -1,4 +1,4 @@
-package com.nikolaev;
+package Module3;
 
 import java.util.Scanner;
 public class Easy1 {

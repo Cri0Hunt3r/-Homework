@@ -1,4 +1,4 @@
-package com.nikolaev;
+package Module3;
 
 public class Middle3 {
     public static void main(String[] args) {
