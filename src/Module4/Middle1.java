@@ -8,7 +8,7 @@ public class Middle1 {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int c = scanner.nextInt();
-        if ((a > b) & (a > c) & (b > c)) {
+        if (a > b & a > c & b > c) {
             System.out.println("min:" + c);
             System.out.println("max:" + a);
             System.out.println("mid:" + b);

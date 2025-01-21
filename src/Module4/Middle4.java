@@ -1,6 +1,5 @@
 package Module4;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Middle4 {
@@ -9,11 +8,11 @@ public class Middle4 {
         String a = scanner.next();
         String b = scanner.next();
         String c = scanner.next();
-        if ((Objects.equals(a, "яйцо")) || (Objects.equals(b, "яйцо")) || (Objects.equals(c, "яйцо"))) {
+        if (a.equals("яйца") || b.equals("яйца") || c.equals("яйца")) {
             System.out.println("яичницу");
-        } if (((Objects.equals(a, "яйцо")) || (Objects.equals(b, "яйцо")) || (Objects.equals(c, "яйцо"))) & ((Objects.equals(a, "молоко")) || (Objects.equals(b, "молоко")) || (Objects.equals(c, "молоко")))) {
+        } if ((a.equals("яйца") || b.equals("яйца") || c.equals("яйца")) & (a.equals("молоко") || b.equals("молоко") || c.equals("молоко"))) {
             System.out.println("омлет");
-        } if (((Objects.equals(a, "кофе")) || (Objects.equals(b, "кофе")) || (Objects.equals(c, "кофе"))) & ((Objects.equals(a, "молоко")) || (Objects.equals(b, "молоко")) || (Objects.equals(c, "молоко")))) {
+        } if ((a.equals("молоко") || b.equals("молоко") || c.equals("молоко")) & (a.equals("кофе") || b.equals("кофе") || c.equals("кофе"))) {
             System.out.println("кофе");
         }
     }
