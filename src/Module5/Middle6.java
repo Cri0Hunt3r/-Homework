@@ -10,15 +10,15 @@ public class Middle6 {
         for (int i = 1; i <= 5; i++) {
             int a = random.nextInt(10) + 1;
             int b = random.nextInt(10) + 1;
-            int C = a * b;
+            int c = a * b;
 
             System.out.print("Пример " + i + ": Сколько будет " + a + " * " + b + "? ");
             int userAnswer = scanner.nextInt();
 
-            if (userAnswer == C) {
+            if (userAnswer == c) {
                 System.out.println("Правильно!");
             } else {
-                System.out.println("Неправильно! Правильный ответ: " + C);
+                System.out.println("Неправильно! Правильный ответ: " + c);
             }
         }
     }
