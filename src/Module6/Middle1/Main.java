@@ -1,12 +1,10 @@
 package Module6.Middle1;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Calculator calculator = new Calculator();
 
         System.out.print("Введите действие: ");
         String method = scanner.next();
@@ -15,14 +13,22 @@ public class Main {
         System.out.print("Введите второй аргумент: ");
         int arg2 = scanner.nextInt();
 
-        if (Objects.equals(method, "+")) {
-            System.out.println(calculator.sum(arg1, arg2));
-        } else if(Objects.equals(method, "-")){
-            System.out.println(calculator.diff(arg1, arg2));
-        } else if(Objects.equals(method, "*")){
-            System.out.println(calculator.prod(arg1, arg2));
-        } else if(Objects.equals(method, "/")){
-            System.out.println(calculator.quot(arg1, arg2));
+        switch (method) {
+            case "+" :
+                System.out.println(Calculator.sum(arg1, arg2));
+                break;
+            case "-" :
+                System.out.println(Calculator.diff(arg1, arg2));
+                break;
+            case "*" :
+                System.out.println(Calculator.prod(arg1, arg2));
+                break;
+            case "/" :
+                System.out.println(Calculator.quot(arg1, arg2));
+                break;
+            default:
+                System.out.println("Вы ввели недопустимый символ. Можно вводить только: + - * /");
+                break;
         }
     }
 }
@@ -30,13 +36,13 @@ public class Main {
 
 
 class Calculator {
-    public int sum(int a, int b) {
+    public static int sum(int a, int b) {
         return a + b;
-    } public int diff(int a, int b) {
+    } public static int diff(int a, int b) {
         return a - b;
-    } public int prod(int a, int b) {
+    } public static int prod(int a, int b) {
         return a * b;
-    } public float quot(int a, int b) {
+    } public static float quot(int a, int b) {
         return (float) a / b;
     }
 }

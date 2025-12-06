@@ -9,7 +9,16 @@ public class StoneGame {
     private int counter;
     private static int computer;
     private boolean tumbler = true;
+    int computerNumber;
+    Player player;
+
     public StoneGame(int computerNumber, Player player) {
+        this.computerNumber = computerNumber;
+        this.player = player;
+        startGame();
+    }
+
+    public void startGame() {
         System.out.println("Сейчас ходит первый игрок");
         while (true) {
             counter += scanner.nextInt();

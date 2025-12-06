@@ -4,12 +4,18 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    Scanner scanner = new Scanner(System.in);
-    Random random = new Random();
+    private final Scanner scanner = new Scanner(System.in);
+    private final Random random = new Random();
+    private int sticks;
 
     public Game(int sticks) {
+        this.sticks = sticks;
+        startPlay();
+    }
+
+    public void startPlay() {
         int playerNumber;
-        while (sticks != 0){
+        while (sticks != 0) {
             playerNumber = scanner.nextInt();
             if (playerNumber > 3 || playerNumber < 1) {
                 System.out.println("Вы можете называть только числа: 1 2 3");
@@ -18,6 +24,7 @@ public class Game {
             sticks -= playerNumber;
             int computerNumber = getNumber(sticks);
             sticks -= computerNumber;
+
             if (computerNumber == -1) {
                 System.out.println("Вы проиграли");
                 break;
@@ -25,11 +32,13 @@ public class Game {
                 System.out.println("Вы победили");
                 break;
             }
+
             System.out.println("Компьютер выбрал число " + computerNumber);
             System.out.print("Оставшееся число палочек:");
             for (int i = 0; i < sticks; i++) {
                 System.out.print("|");
-            } System.out.println(" ");
+            }
+            System.out.println(" ");
         }
     }
 
