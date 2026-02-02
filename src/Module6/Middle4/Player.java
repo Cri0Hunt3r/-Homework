@@ -25,7 +25,7 @@ public class Player {
         if (getWinsOne() > getWinsTwo()) {
             System.out.println("ПЕРВЫЙ ИГРОК ПОБЕДИЛ");
         } else {
-            System.out.println("ЦТОРОЙ ИГРОК ПОБЕДИЛ");
+            System.out.println("ВТОРОЙ ИГРОК ПОБЕДИЛ");
         }
     }
 }
